@@ -2,19 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Message;
 use Illuminate\Http\Request;
 
-class ThreadController extends Controller
+class MessageReactionController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $messages = Message::all();
-
-        return view('thread', ['messages'=> $messages]);
+        return view('admin.replay-message');
     }
 
     /**
@@ -30,7 +27,7 @@ class ThreadController extends Controller
      */
     public function store(Request $request)
     {
-        $request->dd();
+        //
     }
 
     /**
