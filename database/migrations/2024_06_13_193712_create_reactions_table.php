@@ -16,7 +16,6 @@ return new class extends Migration
             $table->text('data');
             $table->integer('admin_id');
             $table->integer('message_id');
-            $table->integer('department_id')->nullable();
             $table->timestamps();
         });
     }

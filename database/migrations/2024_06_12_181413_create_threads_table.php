@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('threads', function (Blueprint $table) {
             $table->id();
             $table->integer('messageReaction_id')->nullable();
-            $table->integer('department_id')->nullable();
             $table->string('subject', 255)->nullable();
             $table->boolean('invitations')->default(false);
             $table->timestamps();

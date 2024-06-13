@@ -36,6 +36,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/ticket', [TicketController::class, 'index'])->name('ticket');
+Route::post('/ticket', [TicketController::class, 'store'])->name('ticket.buy');
 Route::get('/thread', [ThreadController::class, 'index'])->name('thread');
 Route::post('/thread', [ThreadController::class, 'store'])->name('thread.replay');
 Route::get('/message', [MessageController::class, 'index'])->name('message');
