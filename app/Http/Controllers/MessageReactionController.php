@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class MessageReactionController extends Controller
@@ -11,7 +12,10 @@ class MessageReactionController extends Controller
      */
     public function index()
     {
-        return view('admin.replay-message');
+        $messages = Message::all();
+
+        return view('admin.reply-message', ['messages'=> $messages]);
+        
     }
 
     /**

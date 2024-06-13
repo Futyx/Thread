@@ -43,7 +43,7 @@ Route::post('/message', [MessageController::class, 'store'])->name('data');
 
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/admin/replay', [MessageReactionController::class, 'index'])->name('replay');
+Route::get('/admin/reply', [MessageReactionController::class, 'index'])->name('reply.message');
 
 Route::group(['prefix' => 'admin'],function (){
 

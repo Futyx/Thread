@@ -11,4 +11,19 @@ class Thread extends Model
      
     protected $guarded =['id'];
 
+    public function participant(){
+
+        return $this->hasOne(User::class);
+    }
+
+    public function message(){
+
+        return $this->through(User::class)->has(Message::class);
+    }
+
+    public function reaction(){
+
+        return $this->through(MessageReaction::class)->has(Reaction::class);
+    }
+
 }

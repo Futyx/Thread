@@ -11,4 +11,14 @@ class Participant extends Model
      
     protected $guarded =['id'];
 
+    public function user(){
+
+        return $this->hasMany(User::class);
+    }
+
+    public function ticket(){
+
+        return $this->hasOne(Ticket::class);
+    }
+
 }

@@ -13,10 +13,8 @@ return new class extends Migration
     {
         Schema::create('message_reactions', function (Blueprint $table) {
             $table->id();
-            $table->text('data');
-            $table->integer('thread_id')->nullable();
             $table->integer('message_id')->nullable();
-            $table->integer('admin_id')->nullable();
+            $table->integer('reaction_id')->nullable();
             $table->timestamps();
         });
     }
